@@ -6,7 +6,7 @@ public class Biblioteca {
     public List<Livro> livros;
 
     public Biblioteca() {
-        livros = new ArrayList<>();
+        this.livros = new ArrayList<>();
     }
 
     public void adicionarLivro(Livro livro) {
@@ -14,8 +14,14 @@ public class Biblioteca {
     }
 
     public void listarLivros() {
-        for (Livro livro : livros) {
-            System.out.println(livro);
+        if (livros.isEmpty()) {
+            System.out.println("Nenhum livro cadastrado.");
+        } else {
+            for (Livro livro : livros) {
+                System.out.println(livro);
+                System.out.println("######################################");
+            }
         }
     }
 }
+
